@@ -9,6 +9,22 @@ dados  →  treino (Python/Keras)  →  export (.tflite int8)  →  inferência 
 ## Resultados até agora
 
 **Etapa 1, passo 3 de 5:** uma rede que reconhece 10 tipos de roupa em fotos 28×28.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="docs/resultados/0001-fotos.png" alt="8 fotos de cada uma das 10 roupas do Fashion-MNIST">
+<br><b>O material de estudo:</b> 8 fotos de cada roupa, com a etiqueta ao lado.
+Camisa, camiseta, pulôver e casaco são difíceis de separar até para gente.
+</td>
+<td width="50%" valign="top">
+<img src="docs/resultados/0001-fotos-numeros.png" alt="Uma bota com o valor de cada pixel escrito em cima">
+<br><b>O que o modelo recebe de fato:</b> não uma bota, e sim 784 números de 0 a 255.
+Aprender é descobrir que esse desenho de números quer dizer "bota".
+</td>
+</tr>
+</table>
+
 Nota na prova, feita com 10 000 fotos que nenhum modelo viu:
 
 | Modelo | Acerto | O que é |
