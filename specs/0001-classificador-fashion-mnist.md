@@ -105,14 +105,14 @@ o pixel cru e não replica aritmética nenhuma (Regra 01).
 
 ## Critérios de aceite
 
-- [ ] **CA-01** — Dado o dataset carregado, quando os splits são construídos, então há
+- [x] **CA-01** — Dado o dataset carregado, quando os splits são construídos, então há
       54 000 / 6 000 / 10 000 exemplos e **nenhum índice do teste aparece em treino ou
       validação**.
-- [ ] **CA-02** — Dado o baseline de classe majoritária, quando é avaliado no teste,
+- [x] **CA-02** — Dado o baseline de classe majoritária, quando é avaliado no teste,
       então sua acurácia é reportada e fica em ≈ 0,10.
-- [ ] **CA-03** — Dado o baseline de regressão logística, quando é treinado e avaliado,
+- [x] **CA-03** — Dado o baseline de regressão logística, quando é treinado e avaliado,
       então sua acurácia é reportada — e é esse o número que o modelo precisa superar.
-- [ ] **CA-04** — Dado o modelo Keras treinado, quando é avaliado **uma vez** no teste,
+- [x] **CA-04** — Dado o modelo Keras treinado, quando é avaliado **uma vez** no teste,
       então a acurácia é **≥ 0,88** e supera o baseline logístico.
 - [ ] **CA-05** — Dado o modelo treinado, quando é exportado, então existe um
       `.tflite` int8 cuja entrada é `[1,28,28,1] uint8` e a saída `[1,10]`, exatamente
@@ -125,9 +125,9 @@ o pixel cru e não replica aritmética nenhuma (Regra 01).
       feita fora do modelo.
 - [ ] **CA-08** — Dado o `.tflite` exportado, quando o JSON ao lado é lido, então ele
       contém labels, shapes, dtypes, acurácia, baseline e o SHA do commit de treino.
-- [ ] **CA-09** — Dado o mesmo comando de treino executado duas vezes com a mesma seed,
+- [x] **CA-09** — Dado o mesmo comando de treino executado duas vezes com a mesma seed,
       quando as acurácias são comparadas, então diferem em menos de 0,5 ponto percentual.
-- [ ] **CA-10** — Dado o modelo avaliado, quando a matriz de confusão é gerada, então
+- [x] **CA-10** — Dado o modelo avaliado, quando a matriz de confusão é gerada, então
       nenhuma classe tem *recall* igual a zero.
 
 ## Plano de testes

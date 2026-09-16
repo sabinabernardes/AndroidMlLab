@@ -69,6 +69,7 @@ models/                artefatos exportados (.tflite + JSON de metadata)
 app/                   Android — ainda não existe (etapa 2)
 docs/VISAO-GERAL.md    o problema e o plano, sem jargão — comece por aqui
 docs/CONCEITOS.md      o mapa dos termos de ML — comece por aqui
+docs/RESULTADOS.md     os números de cada passo, e o que eles querem dizer
 docs/ATRITO.md         onde o método e a IA falharam, e o que virou regra
 ```
 
@@ -83,7 +84,7 @@ nativo — já verificado. Detalhes e plano de saída em [`training/README.md`](
 
 ```bash
 training/.venv/bin/python -m pytest training/tests    # testes
-training/.venv/bin/python -m training.src.train       # treina  (etapa 1, após aprovar a spec)
+training/.venv/bin/python -m training.src.treino      # treina  (etapa 1, após aprovar a spec)
 training/.venv/bin/python -m training.src.export      # exporta .tflite
 training/.venv/bin/python -m training.src.verify      # Keras vs .tflite  ← o teste que importa
 ```

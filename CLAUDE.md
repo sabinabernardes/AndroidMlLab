@@ -61,6 +61,7 @@ app/            Android: consome o .tflite (ainda não existe — spec 0002)
 specs/          uma spec por etapa
 docs/VISAO-GERAL.md  o problema e o plano, sem jargão (ponto de partida)
 docs/CONCEITOS.md  mapa dos termos de ML para quem está começando
+docs/RESULTADOS.md números medidos em cada passo, com a leitura deles
 docs/ATRITO.md     registro de atrito: onde a IA/o método falharam
 ```
 
@@ -80,7 +81,7 @@ Ver `training/README.md` para o plano de saída dessa limitação.
 
 ```bash
 training/.venv/bin/python -m pytest training/tests    # testes do lado Python
-training/.venv/bin/python -m training.src.train       # treina
+training/.venv/bin/python -m training.src.treino      # treina
 training/.venv/bin/python -m training.src.export      # exporta .tflite
 training/.venv/bin/python -m training.src.verify      # Keras vs .tflite
 ```
@@ -90,5 +91,7 @@ training/.venv/bin/python -m training.src.verify      # Keras vs .tflite
 - 🔨 `specs/0001-classificador-fashion-mnist.md` — **aprovada, em implementação, passo a passo**
   - ✅ Passo 1 — dados (`training/src/dados.py`)
   - ✅ Passo 2 — baselines (`training/src/baseline.py`): majoritária 10,00%, logística 84,10%
-  - ⬜ Passo 3 — treinar a rede · ⬜ Passo 4 — export · ⬜ Passo 5 — verificação
+  - ✅ Passo 3 — rede (`training/src/treino.py`): **90,72%** no teste; pior roupa: camisa, 63,9%
+  - ⬜ Passo 4 — export · ⬜ Passo 5 — verificação
+  - Números e o que significam: `docs/RESULTADOS.md`
 - ⬜ Etapa Android — será a `0002`, depois da 0001 verde
