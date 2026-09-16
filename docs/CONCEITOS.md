@@ -1,5 +1,8 @@
 # Conceitos — o mapa para quem nunca treinou um modelo
 
+Se ainda não leu, comece pela [`VISAO-GERAL.md`](VISAO-GERAL.md): o problema e o plano,
+sem nenhum destes termos.
+
 Não precisa ler isto de uma vez. É para voltar sempre que aparecer uma palavra estranha
 na spec ou nas regras.
 

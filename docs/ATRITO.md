@@ -46,3 +46,30 @@ O `pytest` de ambiente (3 testes, nenhuma linha de treino) pegou as duas armadil
 acima antes de existir qualquer código de feature. Se o primeiro comando do repo tivesse
 sido "treinar um modelo", os dois erros de ambiente apareceriam misturados com erros de
 ML — e nenhum dos dois seria óbvio.
+
+---
+
+## Passo 2 da spec 0001 (2026-09-16)
+
+**O agente renumerou os passos de memória**
+
+Ao sugerir o próximo passo, o agente chamou o treino da rede de "Passo 2". Na spec
+aprovada, o 2 são os **baselines** — e a ordem não é cosmética: o número da rede só
+significa algo se o do modelo burro já foi visto antes, num momento separado. A
+pessoa pediu "bora pro passo 2, treinar a rede" confiando no rótulo errado.
+
+→ Pego ao reler a spec antes de escrever código, não depois. *Regra que fica:* o
+próximo passo se lê na spec, nunca se cita de memória.
+
+**A explicação chegou tarde: a spec era um muro**
+
+Com dois passos prontos e os testes verdes, a pessoa disse que não estava entendendo
+nem o passo a passo nem o problema. Tudo o que existia (spec, `CONCEITOS.md`, as
+respostas do agente) explicava *termos*. Nada explicava a *história*: que app é esse,
+e por que cada passo existe. E o agente ia seguindo para o passo seguinte a cada número
+verde, que é justamente o sinal que não mede entendimento.
+
+→ *Virou:* `docs/VISAO-GERAL.md`, a explicação sem jargão (o aluno, a prova trancada,
+os alunos fracos), ligada como primeiro item do "por onde começar". E um script para
+**ver as fotos** (`ver_fotos.py`), porque 784 números de 0 a 255 explicam o que é um
+modelo melhor que qualquer tabela.

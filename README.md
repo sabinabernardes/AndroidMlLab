@@ -11,7 +11,8 @@ problema sem ensinar nada sobre ele — você chama um método e recebe uma resp
 modelo continua sendo uma caixa preta. Aqui o modelo é seu: você treina, mede, quantiza,
 e descobre no caminho que o modelo que roda no celular **não é** o que você treinou.
 
-> **Nunca treinou um modelo?** É o caso previsto. Comece por
+> **Nunca treinou um modelo?** É o caso previsto. Leia primeiro
+> [`docs/VISAO-GERAL.md`](docs/VISAO-GERAL.md) (o problema e o plano, sem jargão), depois
 > [`docs/CONCEITOS.md`](docs/CONCEITOS.md): é o mapa dos termos que aparecem nas specs
 > — *baseline*, quantização, *split*, tensor — traduzidos para o que você já conhece.
 > Leva ~10 min e é o que faz o resto deixar de ser um muro.
@@ -30,18 +31,21 @@ Cada etapa só começa quando a anterior está verde. **A etapa 1 é a única ab
 ## Por onde começar, concretamente
 
 ```bash
-# 1. o vocabulário  (~10 min, e evita ler as specs no escuro)
+# 1. o que estamos fazendo e por quê, sem jargão  (~5 min)
+docs/VISAO-GERAL.md
+
+# 2. o vocabulário  (~10 min, e evita ler as specs no escuro)
 docs/CONCEITOS.md
 
-# 2. o método e as regras
+# 3. o método e as regras
 CLAUDE.md
 .claude/rules/01-fronteira-modelo.md
 .claude/rules/02-testes.md
 
-# 3. a spec da etapa 1
+# 4. a spec da etapa 1
 specs/0001-classificador-fashion-mnist.md
 
-# 4. confirme que o ambiente está de pé (já instalado e verificado)
+# 5. confirme que o ambiente está de pé (já instalado e verificado)
 training/.venv/bin/python -m pytest training/tests -q
 ```
 
@@ -63,6 +67,7 @@ specs/                 uma spec por etapa do pipeline
 training/              Python: dados, treino, export, verificação
 models/                artefatos exportados (.tflite + JSON de metadata)
 app/                   Android — ainda não existe (etapa 2)
+docs/VISAO-GERAL.md    o problema e o plano, sem jargão — comece por aqui
 docs/CONCEITOS.md      o mapa dos termos de ML — comece por aqui
 docs/ATRITO.md         onde o método e a IA falharam, e o que virou regra
 ```

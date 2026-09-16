@@ -59,6 +59,7 @@ training/       Python: dados, treino, export, verificação
 models/         artefatos exportados e versionados (.tflite + metadata)
 app/            Android: consome o .tflite (ainda não existe — spec 0002)
 specs/          uma spec por etapa
+docs/VISAO-GERAL.md  o problema e o plano, sem jargão (ponto de partida)
 docs/CONCEITOS.md  mapa dos termos de ML para quem está começando
 docs/ATRITO.md     registro de atrito: onde a IA/o método falharam
 ```
@@ -86,5 +87,8 @@ training/.venv/bin/python -m training.src.verify      # Keras vs .tflite
 
 ## Estado atual
 
-- 📝 `specs/0001-classificador-fashion-mnist.md` — **escrita, aguardando aprovação**
+- 🔨 `specs/0001-classificador-fashion-mnist.md` — **aprovada, em implementação, passo a passo**
+  - ✅ Passo 1 — dados (`training/src/dados.py`)
+  - ✅ Passo 2 — baselines (`training/src/baseline.py`): majoritária 10,00%, logística 84,10%
+  - ⬜ Passo 3 — treinar a rede · ⬜ Passo 4 — export · ⬜ Passo 5 — verificação
 - ⬜ Etapa Android — será a `0002`, depois da 0001 verde

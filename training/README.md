@@ -42,5 +42,5 @@ tests/   pytest — formato Given/When/Then (Regra 02)
 data/    dataset baixado (ignorado pelo git)
 ```
 
-`src/` está vazio de propósito: a **spec 0001 ainda não foi aprovada**, e a regra deste
-repositório é que nenhuma etapa começa por código.
+`src/` cresce um passo por vez, na ordem da spec 0001. O que já existe está no `CLAUDE.md`,
+seção "Estado atual".
