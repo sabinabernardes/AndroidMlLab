@@ -1,7 +1,9 @@
 # 0001 — Classificador Fashion-MNIST: treinar, exportar, verificar
 
-- **Estado:** **rascunho — aguardando aprovação** (uma decisão sua no fim)
+- **Estado:** **aprovada** (Sabina, 2026-09-16) — pronta para implementação
 - **Data:** 2026-09-16
+- **Modo de implementação:** **(a) passo a passo** — um script por vez, cada número
+  visto antes de seguir para o próximo passo
 
 > **Primeira vez com ML?** Leia [`docs/CONCEITOS.md`](../docs/CONCEITOS.md) antes desta
 > spec. Ela usa uns quinze termos — *baseline*, quantização, *split*, *recall* — que o
