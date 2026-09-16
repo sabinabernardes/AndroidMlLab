@@ -1,0 +1,21 @@
+# Python
+training/.venv/
+__pycache__/
+*.pyc
+
+# Datasets baixados (grandes, reproduzíveis)
+training/data/
+
+# Artefatos de treino intermediários
+training/runs/
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+
+# macOS
+.DS_Store

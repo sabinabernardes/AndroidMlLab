@@ -1,0 +1,11 @@
+# Verificado em 2026-09-16 no Python 3.9.6 arm64 (/usr/bin/python3)
+tensorflow==2.20.0
+numpy==2.0.2
+
+# O intérprete. Fixado em 1.3.0 de propósito: o wheel macOS/arm64 das versões
+# 1.4.0 e 2.0.x está quebrado (libpywrap_litert_common.dylib ausente). O
+# tf.lite.Interpreter seria a alternativa, mas está deprecado e marcado para
+# remoção pelo próprio TensorFlow 2.20.
+ai-edge-litert==1.3.0
+
+pytest==8.3.4
