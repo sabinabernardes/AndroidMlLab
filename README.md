@@ -6,6 +6,35 @@ Aprender **machine learning de ponta a ponta, com Android como destino**.
 dados  →  treino (Python/Keras)  →  export (.tflite int8)  →  inferência on-device (Kotlin)
 ```
 
+## Resultados até agora
+
+**Etapa 1, passo 3 de 5:** uma rede que reconhece 10 tipos de roupa em fotos 28×28.
+Nota na prova, feita com 10 000 fotos que nenhum modelo viu:
+
+| Modelo | Acerto | O que é |
+|---|---|---|
+| Chute: sempre "tênis" | 10,00% | Não olha a foto |
+| Regressão logística | 84,10% | Olha pixel por pixel, sem enxergar formato |
+| **Rede convolucional** | **90,72%** | Enxerga formato. Meta da spec: ≥ 88% ✅ |
+
+<img src="docs/resultados/0001-matriz-confusao.png" alt="Matriz de confusão da rede no teste" width="560">
+
+A diagonal são os acertos. A pior roupa é a **camisa (63,9%)**, confundida com camiseta,
+casaco e pulôver, que são difíceis de separar até para gente em 28×28 pixels. Os erros
+ficam dentro da família: calça nunca virou bota.
+
+→ Todos os números, e o que cada um ensina: [`docs/RESULTADOS.md`](docs/RESULTADOS.md)
+
+| Passo | Estado |
+|---|---|
+| 1. Separar as fotos sem vazamento | ✅ |
+| 2. Medir os baselines | ✅ |
+| 3. Treinar a rede | ✅ |
+| 4. Encolher para `.tflite` int8 | ⬜ próximo |
+| 5. Verificar que a compressão não estragou | ⬜ |
+
+## Por que este repositório
+
 A escolha por trás do repositório: não começar pelo ML Kit. As APIs prontas resolvem o
 problema sem ensinar nada sobre ele — você chama um método e recebe uma resposta, e o
 modelo continua sendo uma caixa preta. Aqui o modelo é seu: você treina, mede, quantiza,
